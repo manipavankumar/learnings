@@ -1,0 +1,25 @@
+1.create node pointers and int value to store deleted value
+    node *p,*q;
+    int del_value,i;
+2.check if pos is 1 or not 
+   if (pos==0){
+        del_value=first->data; //assign the fisrtsnode value to del_value
+        p=first;  //p and fisrt points to the same node 
+        first =first->link; // shifting first that points to next node
+        free(p);  // deleting the first node
+        return del_value;
+   }
+   else
+   {
+        p=fisrt;
+        q=NULL;
+        for(i=0;i<pos-1 && p;i++){
+            q=p;
+            p=p->next;
+        }
+        if(p){
+            q->next= p->next;
+            del_value =p->data;
+            return del_value;
+        }
+   }

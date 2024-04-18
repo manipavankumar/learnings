@@ -1,0 +1,16 @@
+1.create newnode and assign value to it
+    node *newnode= malloc;
+    
+2.create one more node to traverse with any name
+    node *p=malloc;
+3. assign value to newnode
+    newnode->data=9;
+4. assign first to p
+    p= first
+5. itterate the loop till reaches to pos (pos-1)
+    for(i=0;i<pos-1;i++)
+        p=p->link //shift the p 
+6.assign 
+    newnode->link to p->link;
+7.assign 
+    p->link =newnode;
