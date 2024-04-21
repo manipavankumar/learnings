@@ -1,0 +1,4 @@
+!0 = 1;
+!1 = 0;
+!9876 =0;
+* any value that is with !is 0 expect 1.

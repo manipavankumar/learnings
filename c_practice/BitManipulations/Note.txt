@@ -1,0 +1,34 @@
+&(Bitwise AND): Takes two numbers as operands and does AND on every bit of two numbers. the result of AND is 1 only if both bits are 1.
+
+| (Bitwise OR):Takes two numbers as operands and does OR on every bit of two numbers. the result of OR is 1 only if any one of the two bits are 1.
+
+^(Bitwise XOR): Takes two numbers as operands and does XOR on every bit of two numbers.the result of XOR is 1 only if the two bits are different.
+
+~(BitWise NOT): takes one number, inverts all bits of it.
+
+Leftshift(<<) : takes two numbers,left shifts the bits of the first operand , the second operand decides the number of places to shifts
+                a=8; //0000 1000
+                a << 3 // 0100 0000-->64
+            note*: left shift does nothing but multiplies the number by 2, n times
+                a = a*2 pow 3  == 8 * 8 = 64            
+
+rightshift(>>) : takes two numbers,right shifts the bits of the first operand , the second operand decides the number of places to shifts
+                a=8; //0000 1000
+                a >> 3 // 0000 0001-->1
+            note*: left shift does nothing but divides the number by 2, n times
+                 a= a/2 pow 3 == 8/8 =1
+~a:
+    0000 1000
+    1111 0111
+    Note:MSB in signed integess represents the sign of the number.
+         0=Positive Number, 1 negative number.
+
+understanding the 2s comlipent to represent neagative number:
+
+The binary number 11111011 is an example of a number represented in two's complement form. Let's break down its interpretation:
+
+Sign Bit: The leftmost bit (most significant bit - MSB) is 1, indicating that the number is negative.
+Magnitude: To find the magnitude of the number, we need to invert all the bits except the sign bit (since it represents the sign, not the magnitude), which yields 00000100.
+Addition of 1: After inverting the bits, we add 1 to get the final representation. Adding 1 to 00000100 results in 00000101.
+So, 11111011 represents the negative number -5 in two's complement form.
+
