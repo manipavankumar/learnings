@@ -6,16 +6,19 @@ int bit_operation(int bit);
 void find_even_odd(int bit);
 void call_powerof2_fun(int bit);
 void toggle_bit(int *bit,int pos);
-
+int count_set_bits(int bit);
 
 
 int bit_operation(int bit)
 {
     int choice,position,mask;
-    printf("choice the operation:\nenter 1 for set a bit\nenter 2 for clear a bit\nenter 3 for toggle a bit\n");
+    printf("choice the operation:\nenter 1 for set a bit\nenter 2 for clear a bit\nenter 3 for toggle a bit\nenter 4 to count the number of set bits\n");
     scanf("%d",&choice);
-    printf("enter the position to manipulate");
-    scanf("%d",&position);
+   
+    if(choice != 4){
+        printf("enter the position to manipulate");
+        scanf("%d",&position);
+    }
     switch(choice){
         case 1:
             mask = 1<<(position-1);
@@ -30,11 +33,27 @@ int bit_operation(int bit)
             bit ^= mask;
             return bit;
             break;
+        case 4:
+            return count_set_bits(bit);
+            break;
         default:
             printf("select the correct choice");
             break;
     }
+    
 }
+
+int count_set_bits(int bit)
+{
+    int count=0;
+    while(bit!=0){ //checking a number is not zero
+        if(bit & 1 == 1) // checking AND operation retults 1 or not
+            count++;    // counting the set bits
+        bit >>= 1;
+    }
+    return count;
+}
+
 void find_even_odd(int bit)
 {
     int choice;
@@ -85,7 +104,6 @@ int main(){
     //find_even_odd(bit); //find even or odd
     //call_powerof2_fun(bit);
     //toggle_bit(&bit,3); printf("%d",bit); //toggling a bit using pointer
-
-    
+   
 return 0;
 }
