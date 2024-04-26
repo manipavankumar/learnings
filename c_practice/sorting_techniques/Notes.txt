@@ -1,0 +1,2 @@
+BUBBLE sort:
+~ bubble sort is simplest among other.Bubble sort works on the repeatedly swapping of adjacent elements until they are not in the intended order.
