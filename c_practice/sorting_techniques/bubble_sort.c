@@ -7,22 +7,23 @@ void print(int arr[],int len)
         printf("%d",arr[i]);
 }
 
-
+void swap(int *a,int *b){
+    int temp =*a;
+    *a=*b;
+    *b=temp;
+}
 
 void BubbleSort(int arr[],int length)
 {
-    int i,j,tmp;
+    int i,j;
     for(i=0;i<length;i++){
         for(j=i+1;j<length;j++){
             if(arr[j]<arr[i]){ // comparing adjacent elements in array
             /*swapping the two adjacent elements*/
-                tmp=arr[i];   
-                arr[i]=arr[j];
-                arr[j]=tmp;
+                swap(&arr[j],&arr[i]);
             }
         }
     }
-
 }
 
 

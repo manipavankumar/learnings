@@ -1,2 +1,13 @@
+There are few sorting techniques each has its method of working, there is some criteria 
+based on that we compare the sorting techniques and suitable for our requirement!
+
+criteria for analysis:
+1.Number of comparisons ->which decides the time complexity.
+2.Number of Swaps -> here we will analyze how many swaps our sorting technique is performing.
+3.Adaptive -> If sorting method is taking less time bcz of already arragned manner then we call it as adaptive 
+4.stable  -> If there are any duplicate elements in the list then in the sorted list their order must be preserved!
+5.Extra Memory 
+
 BUBBLE sort:
 ~ bubble sort is simplest among other.Bubble sort works on the repeatedly swapping of adjacent elements until they are not in the intended order.
+  Bubble sort meets all the above criteria (by nature bubble sort is not adaptive but we can made it as adaptive by using flag)
