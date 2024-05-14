@@ -18,7 +18,7 @@ void BubbleSort(int arr[],int length)
     int i,j;
     for(i=0;i<length;i++){
         for(j=i+1;j<length;j++){
-            if(arr[i]>arr[j]){ // comparing adjacent elements in array
+            if(arr[j]<arr[i]){ // comparing adjacent elements in array
             /*swapping the two adjacent elements*/
                 swap(&arr[j],&arr[i]);
             }
