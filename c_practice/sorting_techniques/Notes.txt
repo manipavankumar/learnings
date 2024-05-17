@@ -11,3 +11,34 @@ criteria for analysis:
 BUBBLE sort:
 ~ bubble sort is simplest among other.Bubble sort works on the repeatedly swapping of adjacent elements until they are not in the intended order.
   Bubble sort meets all the above criteria (by nature bubble sort is not adaptive but we can made it as adaptive by using flag)
+Time complexity =  o(n2)
+
+Insertion sort:
+~ here insertion means inserting an element in a sorted array at a sorted position.
+~In array we just simply shift the sorted elements, once we get a smaller element, then insert.
+~where as in linked list we have to find the position and then insert.
+Time complexity = o(n2)
+
+imp notes** of insertions sort:
+1.so insertion sort will give you intermediate results (just one pass or two pass will not give you useful result).
+  like in bubble sort if you perform one pass will get latgest element.
+2.in an array we have to shift the elements but in linked list we dont shift.
+  so insertion sort more useful and more compatable with the linked list than array.
+  i.e, insertion sort is designed for linked list
+
+Selection Sort:
+~ This is (n2) algorithm and it comes under comaparision based sorting.
+1.from passes we find the min element positions(index)
+2.Then interchange the elements of i to K.
+3. In first pass the the smallest element in the list will be sorted.
+note*
+1.swaps= O(n) This is the only algorithm which swaps the elements with minimum number of swaps.
+2.Selection sort is not adaptive.
+3.Selection sort is not stable.(it will not preserve the order).
+
+Quick sort:
+~ quick sort works on an idea that an element is already in a sorted position.
+~If all the elements before that element are smaller and all the elements are after that element are greater. then we say that element in sorted position.
+~quick sort uses partioning procedure for sorting the elements.
+
+Time complexity : o(n2)
