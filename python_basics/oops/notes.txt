@@ -1,0 +1,57 @@
+Class Definition:
+
+class MyClass: defines a new class named MyClass.
+Constructor Method:
+
+def __init__(self, value): is the constructor method (also known as the initializer). It is called when an instance of the class is created. It initializes the instance with a given value.
+self.value = value sets the instance attribute value to the value passed when the instance is created.
+Instance Methods:
+
+def display_value(self): is a method that prints the value of the instance attribute value.
+def set_value(self, new_value): is a method that sets the instance attribute value to a new value provided as an argument.
+Creating an Instance:
+
+obj = MyClass(10) creates an instance of MyClass with the initial value of 10.
+Calling Methods:
+
+obj.display_value() calls the display_value method on the instance obj, which prints the current value of value.
+obj.set_value(20) calls the set_value method on the instance obj to change the value of value to 20.
+Key Points
+self Parameter:
+
+The self parameter in the method definition refers to the instance calling the method. It allows access to the attributes and other methods of the class.
+Instance Methods:
+
+Methods that operate on an instance of the class and can access and modify the instance's attributes.
+
+//source https://capgemini.udemy.com/course/python-oops-beginners/learn/lecture/7159810#overview
+four pillars of oops:
+1.abstraction
+2.encapsulation
+3.inheritance
+4.polymorphism
+
+class Employee:
+                 attributes 
+                    |
+class attribute           instance attribute
+
+
+eg: Employee.name //class attritube
+    empone =Employee();
+
+    emp.name ="pavan" // instance attribute
+
+ 
+      errorr
+        ^
+        |
+------------------
+class attribute        
+        ^
+        |
+-------------------
+instance attribute
+
+
+    

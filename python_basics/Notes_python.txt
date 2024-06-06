@@ -1,0 +1,20 @@
+-Python is an interpreted language, meaning that code is executed line by line.
+
+Indentation: Python uses indentation to define code blocks, such as loops, functions, and conditional statements. 
+             Indentation is crucial for readability and affects the execution of the code.
+
+Data Structures: Python provides built-in data structures such as lists, tuples, dictionaries, and sets, 
+                 which are fundamental for storing and manipulating data.
+
+Generators: Generators are functions that return an iterable sequence of items one at a time. 
+            They are memory efficient and are used to generate large sequences of data.
+
+Lambda Functions: Lambda functions are anonymous functions defined using the lambda keyword. 
+                  They are often used as arguments to higher-order functions like map, filter, and sort.
+
+Standard Library: Python comes with a rich standard library that provides modules for tasks such as file I/O,
+                  networking, web development, and more.
+
+*NOtes:
+~ python supports both positive and negative indexing
+~ 
