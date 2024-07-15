@@ -1,0 +1,63 @@
+- A character array is called a string if it is ends withe Null character '\0'
+- Null char is an escape sequence with ascii value 0.
+- String constant is a sequence of characters enclosed in double"" and it is also called as string literal
+- eg: "adding two numbers %d %d" ->(control string used in printf).
+**- The string constant itself becomes a pointer to the first character in the array.
+- eg:char *ptr = "pavan"
+                 1000 1001 ........
+     char array =|'p' |'a'|'v'|'a'|'n' '\0'  
+     printf("%s",*ptr);
+
+-if the string constants are placed adjacent to each other then the complier concatenates
+ them and places a single null char at the end of the concatenated string.
+eg: "red ""fort" 
+    op: red fort
+- to create a string variable we need to declare a character array with sufficient size to hold all the characters
+   including null char
+eg : char str[]= "India"
+    here the complier automatically inserts the null char at the end.
+
+Input and Output string :
+int main()
+{
+    char name[40];
+    printf("enter the name:");
+    scanf("%s",name);
+    printf("%s",name);
+}
+1st run:
+pavan
+pavan
+
+2nd run:
+pavan kumar
+pavan
+
+-The printf() takes the base address of string and continues to display the characters until in encounters the char '\0'
+-Above in scanf() we haven't used  &sign since the name of the array is address of the array.
+-In the 2nd run we could not get the required result. this is because scanf() stops reading
+ as soon as it encounters a white space.
+-for entering the with spaces we can use gets().it stops reading only when it encounters a newline by the nullchar '\0'
+-we have puts() which can output a string and replaces the null char by newline.
+-instead of gets() w ecan go with fgets() to avoid memory problems because gets() cant check the buffer space, if more Input
+ is provided than the size of the array then it will overwrite locations after the end of the array. to avoid this we use fgets(name,sizeof(name),stadin);
+
+
+STRING Library Functions:
+
+-There are several library functions used to manipulate strings, functions are in header file called string.h
+-like strlen() ,strcpy(), strcmp() etc..
+
+STRLEN()
+-This function returns the length of the string.(num of chars in the string excluding the terminating null char).
+-The type size_t is define in stddef.h and is an usigned integer type.
+-strlen() fun accepts a single arugument.
+
+STRCMP()
+int strcmp(const char *s1, const char *s2);
+
+-This function return a 0 if two strings match, otherwise returns non-zero value.
+-it compares char by char.
+
+
+
