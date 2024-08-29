@@ -14,7 +14,7 @@ void LL_create(int a[],int n){
     first->data=a[0];
     first->link =NULL;
     last=first;
-    for(i=1;i<n;i++){
+    for(i=1;i<n;i++){   
         t=(node*)malloc(sizeof(node)); //allocating space for every instance 't' 
         t->data=a[i];
         last->link=t;
@@ -22,7 +22,6 @@ void LL_create(int a[],int n){
     }
     
 }
-
 void display_LL(node *p){
     while(p != NULL){
         printf("%d ", p->data);
@@ -66,8 +65,20 @@ int search_key(node *p,int key){
             return key;
         p=p->link;
     }    
-    return 0;
+    return -1;
 }
+
+int search_key_pos(node *p,int key){
+    int pos=1;
+    while(p!=NULL){
+        if(p->data ==key)
+            return pos;
+        p=p->link;
+        pos++;
+    }    
+    return -1;
+}
+
 void insert_at_benning(node *first){
     node* newnode=(node *)malloc(sizeof(node));
     newnode->data=0;
@@ -83,10 +94,9 @@ void insert_at_pos(node *first,int pos){
     newnode->data=6;
     p=first;
     for(int i=0;i<pos-1;i++)
-        p=p->link;
+            p=p->link;
     newnode->link= p->link;
     p->link=newnode;
-    display_LL(first);
 }
 
 int main()
@@ -95,14 +105,22 @@ int main()
     
     LL_create(a,5);
     
-    /*if(search_key(first,5)==0)
-        printf("Key not found!");
-    else
-        printf("%d",search_key(first,5));
+    /*
+    if(search_key(first,3) != -1 )
+            printf("\nfound the key %d",search_key(first,3));
+        else
+            printf("\nnot found the key");
      */ 
      
-    insert_at_benning(first);
+     /*
+     if(search_key_pos(first,3) != -1 )
+            printf("\nfound the key position %d",search_key_pos(first,3));
+        else
+            printf("\nnot found the key position");
+     */
+
+    //insert_at_benning(first);
     insert_at_pos(first,2);
-    
+     display_LL(first);
     return 0;
 }
