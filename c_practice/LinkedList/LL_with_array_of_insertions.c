@@ -99,6 +99,20 @@ void insert_at_pos(node *first,int pos){
     p->link=newnode;
 }
 
+void delete_node(int pos)
+{
+    node *p=first;
+    node *q=NULL;
+    
+    for(int i=0;i<pos-1;i++){
+        q=p;
+        p=p->link;
+    }
+    q->link =p->link;
+    free(p);
+    
+}
+
 int main()
 {
     int a[]={1,2,3,4,5};
