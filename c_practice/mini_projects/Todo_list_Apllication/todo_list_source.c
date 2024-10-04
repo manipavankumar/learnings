@@ -111,8 +111,8 @@ int main()
                 exit(0);
                 break;
             default:
-                printf("Invalid choice.\n")
-
+                printf("Invalid choice.\n");
+                break;
         }
 
     }
