@@ -1,0 +1,92 @@
+modes:
+Write "w"
+Read "r"
+appand "a"
+
+Write mode-> complier always creates a new file(if the file is not exsists)(if is exsists it will delete the file and creats a new one(overwrites).)
+Appand mode-> first time new file creats and rest all the time it appands data in the same file.
+Read mode -> opens for read data from a file.
+
+Steps to use FILE 
+1.open the file.
+2.as per mode do read/write/appand operation.
+3.close the file.
+
+FILE (preprocessor)
+functions used for file operations
+1.fopen("filename","mode");
+
+
+Notes*
+~ The value of EOF(-1) is not present at the end of the file, it is returned by the file reading functions when end of the file is reached.
+~ functions used for the I/O are:
+    #character I/O  - fgetc(),fputc(),getc(), putc()
+    #String I/O     - fgets(),fputs()
+    #Formatted I/O  - fscanf(), fprintf() 
+    #record I/O     - fread(), fwrite()
+~ fprintf() ->when we want write a different type of data we use this function 
+~ fscanf()  ->when we want read a different type of data we use this function 
+
+================================================================================================================================================================================================
+fprintf Function
+Purpose: The fprintf function is used to print formatted output to a specified file stream. This could be any output stream, such as a file, stdout, stderr, or any other FILE pointer.
+
+Syntax:
+int fprintf(FILE *stream, const char *format, ...);
+
+Parameters:
+
+stream: A pointer to a FILE object that specifies where the formatted output is sent. This could be a file or any other output stream.
+format: Same as in printf, it is a string that specifies the format.
+...: A variable number of arguments providing the data to be formatted.
+
+eg:
+
+FILE *fp = fopen("output.txt", "w");
+if (fp != NULL) {
+    int num = 10;
+    fprintf(fp, "The number is: %d\n", num);
+    fclose(fp);
+}
+
+This example writes the string "The number is: 10" to a file named output.txt.
+
+Output Destination: The output is directed to the file or stream specified by stream.
+
+Return Value: Returns the number of characters printed (excluding the null byte used to end output to strings). If an output error is encountered, a negative value is returned.
+================================================================================================================================================================================================
+sprintf Function:
+Purpose: The sprintf function is used to print formatted output to a string. Instead of writing the output to a console or file, it writes the output to a character array.
+
+Syntax: int sprintf(char *str, const char *format, ...);
+
+Parameters:
+str: A pointer to a character array where the formatted string will be stored.
+format: Similar to printf, this is a string that specifies the format.
+...: A variable number of arguments providing the data to be formatted.
+
+eg:
+char buffer[50];
+int num = 10;
+sprintf(buffer, "The number is: %d", num);
+
+This example stores the formatted string "The number is: 10" in the character array buffer.
+
+Output Destination: The formatted output is stored in the character array str.
+
+Return Value: Returns the number of characters written into the array, not including the null terminator. If an output error is encountered, a negative value is returned.
+
+================================================================================================================================================================================================
+
+*Notes on Usage
+-Buffer Overflow Risk with sprintf:
+Using sprintf can lead to buffer overflow if the destination buffer (str) is not large enough to hold the resulting string. To mitigate this, use snprintf, 
+which allows you to specify the size of the buffer and thus prevent overflows.
+
+-Stream Specification with fprintf:
+fprintf allows for versatile output management by specifying the exact stream (like stdout, stderr, or a file). It's particularly useful for logging, debugging,
+and managing output for different targets.
+
+-Common Error Handling:
+All three functions return the number of characters outputted. If an error occurs (like a write failure for fprintf), they return a negative value, 
+which can be checked to ensure that the operation was successful.

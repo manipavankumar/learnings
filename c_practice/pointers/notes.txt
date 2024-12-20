@@ -1,0 +1,31 @@
+POINTERS
+pointer is a variable that stores memory address. Like all other varabiles it also should has name, has be to
+declared and occupies some space in memory.it is called pointer because it points to the location in memory where
+the address as been stored.
+
+USES of POINTERS
+- simulating call by reference 
+- Returning more than one value from a function.
+- Accessing dynamically allocated memory
+- Implementing data structures like Linkedlist, trees, graphs
+
+MEMORY 
+-memory in computer is made up of bytes arranged in a sequential manner.
+-Each byte is identified by an index number.
+
+Dereferencing pointer:
+
+-We have seen that while declaring a pointer variable, we have to mention the data type.the reason is that when we use 
+ the indirection operator(*), the compiler will look at the base type of the pointer and will retrive the information
+ depending on that base type.
+-The size of pointer varabile is same for all type of pointers but the memory that will be accessed while Dereferencing
+ is different.
+
+
+POINTER ARITHMETIC:
+-All types of arithmetic operations are not possible with pointers. the only valid operations are:
+ 1.addition of an integer to a pointer and increment operation.
+ 2.substraction of an integer from a pointer and decrement operation
+ 3.substraction of a pointer from another pointer of same type.
+
+ 

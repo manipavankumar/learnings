@@ -1,0 +1,20 @@
+qorvo project: on rasberrypi
+
+on uwb chipset board they in built rasberry as connected 
+ 
+through ethernet we access board (ssh)
+
+like bluetooth (uwb(ultra wide band through eg:airdrop))
+
+c(APIs) developed by other team
+
+pytest(framework)
+
+To test wherther c aps are correctly working or not 
+
+in codebase itself I created path for pytest 
+steps
+-----------
+->setup.py(Through this file I call c files)
+->build
+

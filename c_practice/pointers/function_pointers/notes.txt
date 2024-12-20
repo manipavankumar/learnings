@@ -1,0 +1,7 @@
+function pointer: is a variable that stores the address of a function, 
+allowing for dynamic function calls and greater flexibility in code execution.
+
+Use Cases:
+
+Callbacks: Function pointers enable passing functions as arguments, facilitating callback mechanisms. 
+For instance, the qsort function in the C standard library uses a function pointer to determine the sorting order.

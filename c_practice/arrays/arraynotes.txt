@@ -1,0 +1,16 @@
+Arrays: arrays are fundamental data structure in c programming that allows us to store elements/values in a contigues manner of same data type.
+
+we have:
+1D,2D,3D and beyond arrays
+
+1DArray:
+1darray is a simple, linear collections of elements. Each element in array can be accessed using its index. the size of array must be specified during declaretion, and it cant be changed later
+in static arrays.
+
+static arrays: 
+static arrays are arrays whose size is determined at compile time. they are allocated on the stack, which makes them very fast, but their size is fixed and cannot be altered during runtime.
+static arrays  are suitable when we know exact amount of memory we will need.
+
+dynamic arrays:
+This offer more flexibility as their size can be determined during runtime. they are allocated on the heap using functions like malloc(), calloc(), and the size can be modified using realloc().
+this is usefull when the amount of data is not known in advance.

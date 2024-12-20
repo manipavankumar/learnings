@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct node{
+typedef struct node{
     int data;
     struct node *link;
-} typedef node;
+}  node;
+
 node *first =NULL;
 void LL_create(int a[],int n){
     int i;
@@ -79,7 +80,7 @@ int search_key_pos(node *p,int key){
     return -1;
 }
 
-void insert_at_benning(node *first){
+void insert_at_beinning(node *first){
     node* newnode=(node *)malloc(sizeof(node));
     newnode->data=0;
     newnode->link=first;
@@ -88,15 +89,17 @@ void insert_at_benning(node *first){
     
 }
 
-void insert_at_pos(node *first,int pos){
-    node* newnode=(node *)malloc(sizeof(node));
-    node* p=(node *)malloc(sizeof(node));   
-    newnode->data=6;
+void insert_at_pos(int pos){
+    node* p;
     p=first;
-    for(int i=0;i<pos-1;i++)
-            p=p->link;
-    newnode->link= p->link;
-    p->link=newnode;
+    node* newnode=(node *)malloc(sizeof(node));
+    newnode->data=6;
+    newnode->link =NULL;
+    for(int i=0;i<pos-1;i++){
+        p=p->link;
+    }      
+    newnode->link = p->link;
+    p->link = newnode;
 }
 
 void delete_node(int pos)
@@ -112,6 +115,24 @@ void delete_node(int pos)
     free(p);
     
 }
+void reverse__LL()
+{
+    node* current =(node*)malloc(sizeof(node));
+    node* next =(node*)malloc(sizeof(node));
+    node* prev =(node*)malloc(sizeof(node));
+    current = head;
+
+    while(current !=NULL)
+    {
+        next = current->next;
+        current->next = prev;
+        prev=current;
+        current =next;
+    }
+    
+    
+}
+
 
 int main()
 {
@@ -126,15 +147,16 @@ int main()
             printf("\nnot found the key");
      */ 
      
-     /*
+     
      if(search_key_pos(first,3) != -1 )
             printf("\nfound the key position %d",search_key_pos(first,3));
         else
             printf("\nnot found the key position");
-     */
+     
 
-    //insert_at_benning(first);
-    insert_at_pos(first,2);
-     display_LL(first);
+    //insert_at_beginning(first);
+    insert_at_pos(3);
+    display_LL(first);
+    reverse_LL();
     return 0;
 }

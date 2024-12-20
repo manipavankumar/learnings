@@ -56,3 +56,12 @@ Magnitude: To find the magnitude of the number, we need to invert all the bits e
 Addition of 1: After inverting the bits, we add 1 to get the final representation. Adding 1 to 00000100 results in 00000101.
 So, 11111011 represents the negative number -5 in two's complement form.
 
+quick recap:
+-------------
+get a bit: return (num >> position) & 1;
+set a bit: return (1<<position) | num;
+clear a bit : return (1<<position) ^ num;
+toggle a bit :return  num =num^(1<<position);
+
+
+

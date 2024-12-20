@@ -1,0 +1,1 @@
+Node: Node is a instance or object of a C structure.
