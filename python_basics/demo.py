@@ -1,14 +1,11 @@
-a=10
-b=20
-c=30
-if(a>b):
-    if(a>c):
-        print(a)
-    else:
-        print(c)
-else:
-    if(b>c):
-        print(b)
-    else:
-        print(c)
-        
+d1 = {'ramesh':10001,'pavan':10012,'vijay':11003}
+for key,val in d1.items():
+    a = str(val)
+    for i in range(len(a)):
+
+        if a[i] == '1':
+            b = a.replace(a[i],'*')
+            d1[key] = b
+            print(b)
+
+print(d1)

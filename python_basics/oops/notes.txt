@@ -3,8 +3,14 @@ Class Definition:
 class MyClass: defines a new class named MyClass.
 Constructor Method:
 
-def __init__(self, value): is the constructor method (also known as the initializer). It is called when an instance of the class is created. It initializes the instance with a given value.
+def __init__(self, value): is the constructor method (also known as the initializer)
+It is called when an instance of the class is created. It initializes the instance with a given value.
 self.value = value sets the instance attribute value to the value passed when the instance is created.
+
+once init method created you need to make sure you are initializing all your attributes within your init method
+then your object becomes a fully initialized object.(so you can use all attributes in any method with in a class)
+
+
 Instance Methods:
 
 def display_value(self): is a method that prints the value of the instance attribute value.
@@ -53,5 +59,17 @@ class attribute
 -------------------
 instance attribute
 
+static methods and instance method:
 
-    
+*instance methods are methods of your class that makes use of the self paramater to access and modify 
+ the instance attribute of your class.
+*static methods are nothing but without self parameter but make use of static methods we should use
+ decorators(decorators are functions that makes another function and their functionality.(@staticmethod))
+
+
+1. What is encapsulation ?
+ Hiding the implementation details from the end user is called
+as encapsulation
+2. What is abstraction ?
+ Abstraction is the process of steps followed to achieve
+encapsulation

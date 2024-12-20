@@ -17,4 +17,12 @@ Standard Library: Python comes with a rich standard library that provides module
 
 *NOtes:
 ~ python supports both positive and negative indexing
-~ 
+~
+
+
+Datatypes :
+1.Numbers 
+2.Strings
+3.List
+4.tuple
+5.dictionary
